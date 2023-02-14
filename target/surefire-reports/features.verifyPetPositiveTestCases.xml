@@ -1,0 +1,35 @@
+<testsuite failures="0"
+           name="features/verifyPetPositiveTestCases.feature"
+           skipped="0"
+           tests="1"
+           time="3.344426">
+   <testcase classname="features.verifyPetPositiveTestCases"
+             name="create and upload the image by id"
+             time="3.344426">
+      <system-out>* print 'hello' ........................................................... passed
+* def random = ............................................................ passed
+* def random_Integer = .................................................... passed
+* def randomInt = ranInteger(3) ........................................... passed
+* def randomstr = randomString(5) ......................................... passed
+* print 'world' ........................................................... passed
+* print randomstr ......................................................... passed
+* def requestBody = ....................................................... passed
+Given url baseurl ......................................................... passed
+And request requestBody ................................................... passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* def respId = response.id ................................................ passed
+* print respId ............................................................ passed
+* url baseurl ............................................................. passed
+Given path respId + '/uploadImage' ........................................ passed
+And multipart file file  = {read : '../data/download.jpg', filename: 'MyFile' , contentType: 'image/jpg'} . passed
+When method POST .......................................................... passed
+* print response .......................................................... passed
+* def resp = response.code ................................................ passed
+* def respmessage = response.message ...................................... passed
+* match resp contains response.code ....................................... passed
+* match respmessage contains response.message ............................. passed
+Then status 200 ........................................................... passed</system-out>
+   </testcase>
+</testsuite>
