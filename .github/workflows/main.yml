@@ -27,7 +27,7 @@ jobs:
         run: mvn -B package --file pom.xml
         
       - name: Run command
-        run: mvn test "-DconfigPath=qa.yaml" "-Dtags=@CreateAndUpdateImageById"
+        run: mvn test "-DconfigPath=qa.yaml" "-Dtags=@GetDetailsById"
 
        # Generate output reports in artifcats
       - name: Output of the Reports
