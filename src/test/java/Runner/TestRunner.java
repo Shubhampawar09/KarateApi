@@ -12,8 +12,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import static junit.framework.Assert.assertTrue;
-
 public class TestRunner {
 
 static String karateOutputPath = "target/integration-tests";
